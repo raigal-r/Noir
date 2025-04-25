@@ -1,0 +1,14 @@
+{
+  "name": "test4",
+  "packageManager": "yarn@4.1.1",
+  "scripts": {
+    "start": "node index.js"
+
+  },
+
+  "dependencies": {
+    "@aztec/bb.js": "0.82.2",
+    "@noir-lang/noir_js": "1.0.0-beta.2",
+    "@noir-lang/noir_wasm": "1.0.0-beta.2"
+  }
+}
