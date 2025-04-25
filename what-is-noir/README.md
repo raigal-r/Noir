@@ -1,7 +1,7 @@
-#FORK
+# FORK
 Author and Original content: https://github.com/catmcgee/what-is-noir
 
-#[English](#wtf-is-zk-a-hands-on-coding-workshop) | [Español](#wtf-is-zk-workshop-de-coding)
+# [English](#wtf-is-zk-a-hands-on-coding-workshop) | [Español](#wtf-is-zk-workshop-de-coding)
 
 # wtf is zk: a hands-on coding workshop
 ## for Aleph de Verano <3
