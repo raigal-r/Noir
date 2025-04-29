@@ -1,8 +1,6 @@
 // reference2.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 struct Counter {
     value: Field,
     step: Field,
@@ -16,13 +14,14 @@ impl Counter {
     // TODO: Implement the increment method that takes a mutable reference to self
     // and increases the value by step
     fn increment(&mut self) {
-        // Your implementation here
+        self.value = self.value + self.step;
     }
 
     // TODO: Implement the update_step method that takes a mutable reference to self
     // and updates the step value
     fn update_step(&mut self, new_step: Field) {
         // Your implementation here
+        self.step = new_step;
     }
 }
 

@@ -1,27 +1,22 @@
-// reference1.nr
+// slice1.nr
 // use the `hint` watch subcommand for a hint.
 
 // I AM NOT DONE
 
-// TODO: Complete the swap_values function that takes two mutable references
-// to Field values and swaps their values
-fn swap_values(a: &mut Field, b: &mut Field) {
-    // Your implementation here
-    // Hint: You'll need a temporary variable and dereferencing
-}
-
 fn main() {
-    let mut x = 5;
-    let mut y = 10;
+    // TODO:
+    // 1. Create a slice with initial values [1, 2, 3]
+    // 2. Add element 4 to the end of the slice (hint: use `push_back` method)
+    // 3. Add element 0 to the beginning of the slice
+    // Your code here
+    // Tests
 
-    println(f"Before swap: x = {x}, y = {y}");
-    swap_values(&mut x, &mut y);
-    println("After swap: x = {x}, y = {y}");
-    assert(x == 10);
-    assert(y == 5);
+    assert(slice.len() == 5);
+    assert(slice[0] == 0);
+    assert(slice[4] == 4);
 }
 
 #[test]
-fn test_swap() {
+fn test_basic_operations() {
     main();
 }
