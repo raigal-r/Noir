@@ -1,25 +1,41 @@
 // This exercise will help you understand array creation, indexing, and basic operations
 
-// I AM NOT DONE
-
 fn create_array() -> [u64; 5] {
     // TODO: Create and return an array with values [1, 2, 3, 4, 5]
-    [1, 2, 3, 4, 5]
+    let arr: [u64; 5] = [1, 2, 3, 4, 5];
+
+    arr
+}
+
+fn sum_array_2(arr: [u64; 5]) -> u64 {
+    // TODO: Return the sum of all elements in the array
+    // Hint: You can use a for loop or the fold method
+    
+    let mut sum: u64 = 0;
+    for i in 1..5 {
+        sum += i;
+    }
+
+    sum
 }
 
 fn sum_array(arr: [u64; 5]) -> u64 {
-    // TODO: Return the sum of all elements in the array
-    // Hint: You can use a for loop or the fold method
-
+    arr.fold(0, |acc, val| acc + val)
 }
 
 fn double_elements(arr: [u64; 4]) -> [u64; 4] {
     // TODO: Return a new array with each element doubled
     // Hint: You can use the map method
+
+    arr.map(|x| x * 2)
+
+
 }
 
 fn fill_array(value: Field) -> [Field; 3] {
     // TODO: Create and return an array of size 3 filled with the given value
+    
+    [value; 3]
 }
 
 #[test]
