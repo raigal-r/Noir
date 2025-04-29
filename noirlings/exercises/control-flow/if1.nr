@@ -3,12 +3,9 @@
 
 // Change `can_vote` method to make test cases pass.
 
-// I AM NOT DONE
-
-
 
 fn can_vote() -> bool{
-  let age = 15; // Change this line
+  let age = 18; // Change this line
   let mut can_vote: bool = false;
 
   if age >= 18 {

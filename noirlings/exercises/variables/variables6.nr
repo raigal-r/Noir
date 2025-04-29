@@ -1,9 +1,8 @@
 // variables6.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
-global NUMBER = 7;
+global NUMBER: u8  = 7;
 global SMALL_NUMBER: u8 = 3;
 
 fn main() {

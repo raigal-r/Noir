@@ -2,13 +2,16 @@
 // of a given number, and find_special_numbers that finds numbers with exactly
 // k factors within a range
 
-// I AM NOT DONE
 
 fn count_factors(n: u64) -> u64 {
     let mut count = 0;
     for i in 1..n + 1 {
         //TODO: complete code
         // Remember: A number is a factor if n % factor == 0
+
+        if n % i == 0 {
+            count += 1;
+        }
     }
 
     count

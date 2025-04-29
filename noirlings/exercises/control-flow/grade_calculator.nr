@@ -7,7 +7,6 @@
 // - 60-69: "D"
 // - Below 60: "F"
 
-// I AM NOT DONE
 
 fn grade_calculator(score: u8) -> str<1> {
   assert(score >= 0, "Score should be greater than or equal to 0");
@@ -17,7 +16,15 @@ fn grade_calculator(score: u8) -> str<1> {
   if score >= 90 {
     grade = "A";
   }
-  // Write code here
+  if score >= 80 & score <= 89 {
+    grade = "B";
+  }
+   if score >= 70 & score <= 79{
+    grade = "C";
+  }
+  if score >= 60 & score <= 69{
+    grade = "D";
+  }
   grade
 }
 
