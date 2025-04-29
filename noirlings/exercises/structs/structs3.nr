@@ -1,7 +1,6 @@
 // structs3.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 struct Address {
     street_number: Field,
@@ -13,8 +12,25 @@ struct Address {
 // - age: Field
 // - home_address: Address
 
+struct Person {
+    name: str<10>,
+    age: Field,
+    home_address: Address
+}
+
 fn create_person(name: str<10>, age: Field, street_num: Field, zip: Field) -> Person {
     // TODO: Create and return a Person instance with the given parameters
+
+    let person = Person {
+        name: name,
+        age: age, 
+        home_address: Address {
+            street_number: street_num,
+            zip_code: zip,  
+        },
+    };
+
+    person
 }
 
 fn main() {

@@ -5,7 +5,10 @@
 // - x: Field
 // - y: Field
 
-// I AM NOT DONE
+struct Point {
+    x: Field,
+    y: Field,
+}
 
 fn main() {
     let point = Point {

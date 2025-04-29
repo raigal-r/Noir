@@ -1,8 +1,6 @@
 // structs2.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 struct Rectangle {
     width: Field,
     height: Field,
@@ -17,6 +15,10 @@ impl Rectangle {
 
     fn perimeter(self) -> Field {
       2 * (self.width + self.height)
+    }
+
+    fn area(self) -> Field {
+      self.width * self.height
     }
 }
 
