@@ -1,26 +1,25 @@
-// strings1.nr
-// Learn about string declarations and basic assertions
+// integer1.nr
 // I AM NOT DONE
+use std::{wrapping_add,wrapping_mul};
 
-fn check_password(password: str<12>) -> bool {
-    // TODO: Return true if the password:
-    // 1. Is exactly equal to "SuperSecret!"
+fn calculate_game_score(kills: u8, deaths: u8, assists: u8) -> u8 {
+    // TODO: Calculate player score using formula:
+    // score = (kills * 2) + assists - deaths
+    // Use wrapping_add and wrapping_sub to handle overflow
+    // If deaths are more than kills*2 + assists, return 0
 }
 
 fn main() {
-    let password1 = "SuperSecret!";
+    // Normal case
+    assert(calculate_game_score(10, 5, 3) == 18);
     
-    assert(check_password(password1) == true);
+    assert(calculate_game_score(255, 1, 1) == 254); // Should wrap around
     
-    // TODO: Create a string with escape characters that prints:
-    // Hello
-    //     World!
-    // (with one tab space before World)
-    let formatted_text = "Hello\n\tWorld!";
-    assert(formatted_text == "Hello\n\tWorld!");
+    // Deaths > kills*2 + assists
+    assert(calculate_game_score(1, 10, 2) == 0);
 }
 
 #[test]
-fn test_passwords() {
+fn test_game_score() {
     main();
 }

@@ -1,10 +1,16 @@
 // strings1.nr
 // Learn about string declarations and basic assertions
-// I AM NOT DONE
 
 fn check_password(password: str<12>) -> bool {
     // TODO: Return true if the password:
     // 1. Is exactly equal to "SuperSecret!"
+
+    if password == "SuperSecret!" {
+        true
+    }
+    else {
+        false
+    }
 }
 
 fn main() {
