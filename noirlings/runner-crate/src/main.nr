@@ -1,22 +1,23 @@
-// slice1.nr
-// use the `hint` watch subcommand for a hint.
+// tuples1.nr
+// Use the `hint` watch subcommand for a hint.
 
 // I AM NOT DONE
 
-fn main() {
-    // TODO:
-    // 1. Create a slice with initial values [1, 2, 3]
-    // 2. Add element 4 to the end of the slice (hint: use `push_back` method)
-    // 3. Add element 0 to the beginning of the slice
-    // Your code here
-    // Tests
 
-    assert(slice.len() == 5);
-    assert(slice[0] == 0);
-    assert(slice[4] == 4);
+fn create_person(name: str<10>, age: Field, zip: Field) -> (str<10>,Field,Field) {
+    // TODO: Create and return a tuple with the given parameters
+}
+
+fn main() {
+    let person = create_person("JohhnDOOEE", 30, 12345);
+
+    let (name, age, zip_code) = person;
+
+    assert(age == 30);
+    assert(zip_code == 12345);
 }
 
 #[test]
-fn test_basic_operations() {
+fn test_person() {
     main();
 }

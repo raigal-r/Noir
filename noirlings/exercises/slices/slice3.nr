@@ -1,15 +1,18 @@
 // slice3.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 fn transform_slice(input: [Field]) -> [Field] {
     // TODO:
     // 1. Double each element in the slice using map
-    // 2. Filter out all elements that are greater than 10
-    // 3. Return the resulting slice
+    let doubled = input.map(|x| x * 2);
 
-    // Your code here
+    // 2. Filter out all elements that are greater than 10
+    let filtered = doubled.filter(|x| x as u64 <= 10);
+
+    // 3. Return the resulting slice
+    filtered
+
 }
 
 fn main() {

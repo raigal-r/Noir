@@ -1,7 +1,6 @@
 // slice5.nr
 // use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
 struct Transaction {
     amount: Field,
@@ -11,10 +10,15 @@ struct Transaction {
 fn process_transactions(transactions: [Transaction]) -> Field {
     // TODO:
     // 1. Filter out invalid transactions
-    // 2. Extract only the amounts using map
-    // 3. Calculate the total using reduce
-    // 4. Return the final sum
+    let filtered = transactions.filter(|x| x.valid == true);
 
+    // 2. Extract only the amounts using map
+    let amounts = filtered.map(|x| x.amount);
+
+    // 3. Calculate the total using reduce
+    let sum = amounts.reduce(|a, b| a + b);
+
+    // 4. Return the final sum
     // Your code here
 
     sum
