@@ -1,25 +1,29 @@
-// integer1.nr
-// I AM NOT DONE
-use std::{wrapping_add,wrapping_mul};
+// traits1.nr
+// use the `hint` watch subcommand for a hint.
 
-fn calculate_game_score(kills: u8, deaths: u8, assists: u8) -> u8 {
-    // TODO: Calculate player score using formula:
-    // score = (kills * 2) + assists - deaths
-    // Use wrapping_add and wrapping_sub to handle overflow
-    // If deaths are more than kills*2 + assists, return 0
+
+// Basic Trait Implementation
+// This exercise introduces basic trait definition and implementation
+
+// I AM NOT DONE
+
+// A trait for shapes that can calculate their area
+trait Shape {
+    fn area(self) -> Field;
 }
 
-fn main() {
-    // Normal case
-    assert(calculate_game_score(10, 5, 3) == 18);
-    
-    assert(calculate_game_score(255, 1, 1) == 254); // Should wrap around
-    
-    // Deaths > kills*2 + assists
-    assert(calculate_game_score(1, 10, 2) == 0);
+struct Rectangle {
+    width: Field,
+    height: Field,
+}
+
+// The area should be calculated as width * height
+impl Shape for Rectangle {
+    //TODO: Complete `area` method implementation
 }
 
 #[test]
-fn test_game_score() {
-    main();
+fn test_rectangle_area() {
+    let rect = Rectangle { width: 5, height: 3 };
+    assert(rect.area() == 15);
 }
