@@ -1,12 +1,12 @@
 // quiz1.nr
 // No Hint this time. Perhaps discuss with other devs in Noir discord
 
-// I AM NOT DONE
 
 // Input 3 values using 'a'(array of length 3) and check if they all are equal.
 // Return using signal 'c'.
 fn equality(inputs: [u32;3]) -> bool {
- //TODO
+  // Check if first element equals second AND second equals third
+  (inputs[0] == inputs[1]) & (inputs[1] == inputs[2])
 }
 
 #[test]

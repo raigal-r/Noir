@@ -2,8 +2,6 @@
 // Implementing methods for EmbeddedCurvePoint
 // Use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
 struct EmbeddedCurvePoint {
     x: Field,
     y: Field,
@@ -15,25 +13,42 @@ impl EmbeddedCurvePoint {
     // the generator point for the Grumpkin curve (y^2 = x^3 - 17)
     // The x-coordinate is 1, and the y-coordinate is the square root of -16
     pub fn generator() -> EmbeddedCurvePoint {
-      //TODO
+      EmbeddedCurvePoint { 
+        x: 1,
+        y: 17631683881184975370165255887551781615748388533673675138860,
+        is_infinite: false,
+      }    
     }
     
     // TODO: Implement a function called 'point_at_infinity' that returns 
     // the point at infinity (the identity element of the curve)
     // HINT: Look at the test cases
+
     pub fn point_at_infinity() -> EmbeddedCurvePoint {
-      //TODO
+      EmbeddedCurvePoint {
+        x: 0,
+        y: 0,
+        is_infinite: true,
+      }    
     }
     
     // TODO: Implement the negation of a point by implementing the function 'neg'
     // The negation of a point (x,y) is (x,-y)
     // If the point is at infinity, the result should also be at infinity
     pub fn neg(self) -> EmbeddedCurvePoint {
-      // TODO
-    }
+      if self.is_infinite {
+        // Negation of point at infinity is still point at infinity
+        EmbeddedCurvePoint::point_at_infinity()
+      } else {
+        // Negation of (x,y) is (x,-y)
+        EmbeddedCurvePoint {
+          x: self.x,
+          y: -self.y,
+          is_infinite: false,
+        }
+      }
+  }
 }
-
-// I AM NOT DONE
 
 fn main() {
     // Test the generator point

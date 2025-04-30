@@ -8,7 +8,11 @@
 // - is_infinite: bool (flag indicating if it's the point at infinity)
 
 
-// I AM NOT DONE
+struct EmbeddedCurvePoint {
+    x: Field,              // x-coordinate
+    y: Field,              // y-coordinate
+    is_infinite: bool,     // flag for point at infinity
+}
 
 fn main() {
     // Create a regular point
