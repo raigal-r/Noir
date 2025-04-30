@@ -1,11 +1,12 @@
 // tuples2.nr
 // Use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
-
-
 
 fn create_coordinates(x: Field, y: Field, z: Field) ->  (Field,Field,Field){
+
+    let  coord : (Field,Field,Field) = (x, y, z);
+
+    coord
 
 }
 

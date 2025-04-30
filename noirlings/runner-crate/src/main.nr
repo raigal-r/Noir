@@ -1,23 +1,26 @@
-// tuples1.nr
-// Use the `hint` watch subcommand for a hint.
-
+// strings1.nr
+// Learn about string declarations and basic assertions
 // I AM NOT DONE
 
-
-fn create_person(name: str<10>, age: Field, zip: Field) -> (str<10>,Field,Field) {
-    // TODO: Create and return a tuple with the given parameters
+fn check_password(password: str<12>) -> bool {
+    // TODO: Return true if the password:
+    // 1. Is exactly equal to "SuperSecret!"
 }
 
 fn main() {
-    let person = create_person("JohhnDOOEE", 30, 12345);
-
-    let (name, age, zip_code) = person;
-
-    assert(age == 30);
-    assert(zip_code == 12345);
+    let password1 = "SuperSecret!";
+    
+    assert(check_password(password1) == true);
+    
+    // TODO: Create a string with escape characters that prints:
+    // Hello
+    //     World!
+    // (with one tab space before World)
+    let formatted_text = "Hello\n\tWorld!";
+    assert(formatted_text == "Hello\n\tWorld!");
 }
 
 #[test]
-fn test_person() {
+fn test_passwords() {
     main();
 }
