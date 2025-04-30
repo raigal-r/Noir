@@ -2,7 +2,7 @@
 // use the `hint` watch subcommand for a hint.
 // Generic Traits: This exercise demonstrates how to work with generic traits
 
-// I AM NOT DONE
+use std::wrapping_mul;
 
 trait Convert<T> {
     fn convert(self) -> T;
@@ -19,7 +19,16 @@ struct Fahrenheit {
 // TODO: Implement Convert trait to convert Celsius to Fahrenheit
 // Formula: F = (C X 9/5) + 32
 impl Convert<Fahrenheit> for Celsius {
-    // Add your implementation here
+
+    fn convert(self) -> Fahrenheit {  // Correct method name
+        let step1 = wrapping_mul(self.temp, 9);  // Use self.temp
+        let step2 = step1 / 5;
+        let fahrenheit_temp = step2 + 32;
+        
+        // Return a Fahrenheit struct
+        Fahrenheit { temp: fahrenheit_temp }
+    }
+    
 }
 
 #[test]

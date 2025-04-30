@@ -1,29 +1,22 @@
-// traits1.nr
+// field1.nr
 // use the `hint` watch subcommand for a hint.
-
-
-// Basic Trait Implementation
-// This exercise introduces basic trait definition and implementation
 
 // I AM NOT DONE
 
-// A trait for shapes that can calculate their area
-trait Shape {
-    fn area(self) -> Field;
+// For Noir default backend, Grumpkin curve, order of the field value P is 21888242871839275222246405745257275088548364400416034343698204186575808495617
+
+
+fn main() {
+  let p: Field = 21888242871839275222246405745257275088548364400416034343698204186575808495616;
+
+  let p1: Field = p + 1;
+
+  // TODO: replace ? with correct p1 value
+  assert(p1 == 0, "incorrect p1 value");
+
+  let p2: Field = p * p;
+  // TODO: replace ? with correct p1 value
+  assert(p2 == ?, "incorrect p2 value");
 }
 
-struct Rectangle {
-    width: Field,
-    height: Field,
-}
 
-// The area should be calculated as width * height
-impl Shape for Rectangle {
-    //TODO: Complete `area` method implementation
-}
-
-#[test]
-fn test_rectangle_area() {
-    let rect = Rectangle { width: 5, height: 3 };
-    assert(rect.area() == 15);
-}

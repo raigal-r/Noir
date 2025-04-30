@@ -2,8 +2,6 @@
 // use the `hint` watch subcommand for a hint.
 // Multiple Trait Implementation: This exercise shows how to implement multiple traits for a type
 
-// I AM NOT DONE
-
 
 trait Perimeter {
     fn perimeter(self) -> Field;
@@ -21,10 +19,16 @@ struct Circle {
 // Note: Use 3 as an approximation for PI
 impl Area for Circle {
     // Add your implementation here
+
+    fn area(self) -> Field {
+        self.radius * self.radius * 3
+    }
 }
 
 impl Perimeter for Circle {
-    // Add your implementation here
+    fn perimeter(self) -> Field {
+        self.radius * 2 * 3
+    }
 }
 
 #[test]
